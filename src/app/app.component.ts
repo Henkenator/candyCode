@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'candyCode';
+  greenColor = '#00B888';
+  yellowColor = '#FFED15';
+  redColor = '#FF3610';
+  blueColor = '#0CB0E8';
+  darkblueColor = '#37246e';
 }
