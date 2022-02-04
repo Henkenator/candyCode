@@ -1,0 +1,9 @@
+<div class="numpad-container ml-auto mr-auto" style="width:450px; margin-top: 50px">
+  <div class="row">
+    <div *ngFor="let n of [].constructor(9); let i = index" class="col-4 numpad-button d-flex" style="height: 130px">
+      <button class="num-but num-but-number ml-auto mr-auto"
+              [style.background-color]="backgroundColor"
+              (click)="onNumberClick(i + 1)">{{i + 1}}</button>
+    </div>
+  </div>
+</div>

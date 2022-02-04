@@ -1,0 +1,27 @@
+<div class="d-flex">
+  <div class="d-flex ml-auto mr-auto" *ngIf="!correctCode() && !showNumpad">
+    <app-button (click)="openNumpad('green', greenColor)" [selectedCode]="selectedGreen" [backgroundColor]="greenColor"></app-button>
+    <app-button (click)="openNumpad('yellow', yellowColor)" [selectedCode]="selectedYellow" [backgroundColor]="yellowColor"></app-button>
+    <app-button (click)="openNumpad('red', redColor)" [selectedCode]="selectedRed" [backgroundColor]="redColor"></app-button>
+    <app-button (click)="openNumpad('blue', blueColor)" [selectedCode]="selectedBlue" [backgroundColor]="blueColor"></app-button>
+
+  </div>
+
+  <div class="d-flex ml-auto mr-auto" *ngIf="correctCode()">
+    <span>CORRECT</span>
+  </div>
+
+  <app-numpad *ngIf="showNumpad"
+              [color]="selectedButton"
+              [backgroundColor]="selectedColor"
+              (selectedCodeEvent)="selectedCode($event)"
+  ></app-numpad>
+
+</div>
+
+<div>
+  <div>Green: {{greenCode}}, {{selectedGreen}}</div>
+  <div>Yellow: {{yellowCode}}, {{selectedYellow}}</div>
+  <div>Red: {{redCode}}, {{selectedRed}}</div>
+  <div>Blue: {{blueCode}}, {{selectedBlue}}</div>
+</div>
