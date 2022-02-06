@@ -3,7 +3,7 @@ html { background-color: #e8520c;}
 
 .btn-container {
   position: relative;
-  height: 600px;
+  height: 550px;
   width: 100%;
 }
 
@@ -18,5 +18,6 @@ html { background-color: #e8520c;}
 .title-container span {
   padding-left: 3px;
   font-size: 5rem;
-  font-family: Impact;
+  font-weight: bolder;
+  font-family: Arial;
 }
